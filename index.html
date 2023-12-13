@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier avec Local Storage</title>
+    <link rel="stylesheet" href="css/stylce.css">
+    <link rel="stylesheet" href="css/shopping.css">
+    
+</head>
+<body>
+
+    <h1>Produits</h1>
+    <section id="encadrement">
+        <div class="produit" >
+            <img src="Image/image1.png" alt="Produit 1">
+            <h2>Canne Savage Gear SG4</h2>
+            <p>Prix: €111.00</p>
+            <p>Description : L:118cm</p>
+            <p>Puissance: 5-18g </p>
+            <button onclick="ajouterAuPanier('Canne Savage Gear SG4', 111.00)">Ajouter au panier</button>
+        </div>
+   
+        <div class="produit" >
+            <img src="Image/image2.png" alt="Produit 2">
+            <h2>Moulinet casting SPRO freestyle </h2>
+            <p>Prix: €110.00</p>
+            <p>Description: Moulinet casting</p>
+            <p>Puissance: 5-30g</p>
+            <p>Poids: 168g</p>
+            <button onclick="ajouterAuPanier('Moulinet casting SPRO freestyle', 110.00)">Ajouter au panier</button>
+        </div>
+
+        <div class="produit" >
+            <img src="Image/image3.png" alt="Produit 3">
+            <h2>Westin Tresse</h2>
+            <p>Prix: €24.40</p>
+            <p>Diamètre: 20.5/100</p>
+            <p>Résistance (kg): 10.6</p>
+            <button onclick="ajouterAuPanier('Westin Tresse', 24.40)">Ajouter au panier</button>
+        </div>
+        <div class="produit" >
+            <img src="Image/image4.png" alt="Produit 4">
+            <h2>Drunk dancer LMAB 23Cm</h2>
+            <p>Prix: €12.10</p>
+            <p>Couleur : Tropicana tina</p>
+            <p>Taille : 23cm</p>
+            <p>Poids : 68g</p>
+            <button onclick="ajouterAuPanier('Drunk dancer LMAB 23Cm', 12.10)">Ajouter au panier</button>
+        </div>
+        <div class="produit">
+            <img src="Image/image5.png" alt="Produit 5">
+            <h2>Bateau Pneumatique FOX 290 5</h2>
+            <p>Prix: €1099.00</p>
+            <p>Poids (kg) : 35</p>
+            <p>Couleur : Vert</p>
+            <p>Largeur (cm): 166</p>
+            <p>Longeur (cm) : 189</p>
+            <p>Charge maxi (kg) : 396</p>
+            <button onclick="ajouterAuPanier('Bateau Pneumatique FOX 290 5', 1099.00)">Ajouter au panier</button>
+        </div>
+        <div class="produit" >
+            <img src="Image/image6.png" alt="Produit 6">
+            <h2>Waders Femme</h2>
+            <p>Prix: €341.80</p>
+            <p>Taille : XS</p>
+            <p>Tour de taille (cm) : 83-89 </p>
+            <Pointure>36/37</Pointure>
+            <button onclick="ajouterAuPanier('Waders Femme', 341.80)">Ajouter au panier</button>
+        </div>
+        <div class="produit" >
+            <img src="Image/image7.png" alt="Produit 7">
+            <h2>Epuisette FOx Rage</h2>
+            <p>Prix: €65.60</p>
+            <p>Longeur manche(cm) : 40</p>
+            <p>Tête d'épuisette (cm) : 40x50</p>
+            <button onclick="ajouterAuPanier('Epuisette FOx Rage', 65.60)">Ajouter au panier</button>
+        </div>
+        <div class="produit" >
+            <img src="Image/image8.png" alt="Produit 8">
+            <h2>Tête Plombée Vmc Mustache Rig</h2>
+            <p>Prix: €19.10</p>
+            <p>Poids : 40g</p>
+            <p>Taille produit : L</p>
+            <p>Code couleur : CH</p>
+            <button onclick="ajouterAuPanier('Tête Plombée Vmc Mustache Rig', 19.10)">Ajouter au panier</button>
+        </div>
+        <div class="produit" id="produit2">
+            class="produit">
+            <img src="Image/image9.png" alt="Produit 9">
+            <h2>Leurre Coulant Jackson Artist</h2>
+            <p>Prix: €21.80</p>
+            <p>Taille : 8cm</p>
+            <p>Poids : 8g</p>
+            <p>Type leurre : coulant</p>
+            <button onclick="ajouterAuPanier('Leurre Coulant Jackson Artist',21.80)">Ajouter au panier</button>
+        </div>
+    </section>
+
+    <input type="checkbox" id="togglePanier">
+    <label for="togglePanier" id="panierBtn">Panier</label>
+
+    <div id="Panier"> 
+        <h2>Panier</h2>
+        <ul id="liste-panier"></ul>
+        <p>Total: $<span id="total-panier">0.00</span></p>
+    </div>
+
+    <button onclick="supprimerPanier()">Vider le panier</button>
+
+    <script src="Dossier JS/panier.js"></script>
+</body>
+</html>
